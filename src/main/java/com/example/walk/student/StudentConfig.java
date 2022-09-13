@@ -16,9 +16,6 @@ public class StudentConfig {
     CommandLineRunner commandLineRunner(StudentRepository studentRepository){
         return args -> {
             List<Student> studentlist = Arrays.asList(new Student(1l,"TFS12022", "manmohan.pandey@gmail.com", LocalDate.of(1998, Month.FEBRUARY,10), 21));
-
-
-
             studentRepository.saveAll(studentlist);
         };
     }
